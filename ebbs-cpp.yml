@@ -1,16 +1,12 @@
-# This workflow will create a docker image from the repository and push it to dockerhub.
+# This workflow will build an eons-compliant C++ project.
 
 name: EBBS Build C++
 
 on:
-  release:
-    types: [created]
-
-# on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   deploy:
